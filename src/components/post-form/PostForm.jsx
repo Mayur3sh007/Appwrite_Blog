@@ -49,7 +49,7 @@ export default function PostForm({ post }) {    //post if all the info related t
                 const fileId = file.$id;
                 data.Image = fileId;        //Then give image its ID
                                                                 
-                                                            //here we just need to pass userID
+                                                               //here we just need to pass userID
                 const dbPost = await appwriteService.createPost({ ...data, UserID: userData.$id });     //this userData we got from store in beginning
 
                 if (dbPost)
