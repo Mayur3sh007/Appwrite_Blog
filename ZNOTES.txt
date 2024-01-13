@@ -1,0 +1,62 @@
+1]  Create a .env file in root of the project folder. And a .env.sample file which is a copy of env file but without any sensitive info to push 
+   on Github.
+
+2] After that go to App.jsx and console log the contents of .env to see that they work.
+
+            **** Whenever we edit something in .env we have to reload our project ****
+
+3] NOW we go to appwrite to create a new project and get API_endpt(URL) and ProjectID, create DB to get DB_ID , create collection to get their ID
+   ***IMP step in create collection and go to settings and edit permissions and set it to whatever we like and Update permissions
+   Create Attributes inside our collection. Then Indexes
+   Got to storage to create bucket and get id and also go in settings to setup permissions.
+
+   DONE WITH APPWRITE setup
+
+4] Now create a conf folder in src with a conf.js file and 
+   export a const with object of variables cotaining import statements for all this env data like we console.loged it in App.jsx
+   ENCLOSED in string tag****
+                                                            
+5] Now we have to create appwrite folder
+
+6] 1st we create auth.js. Where we have to Handle Login/Signup with appwrite. So we create a client -> account -> functions and export them
+
+7] 2nd we create config.js ...similar to auth.js ... Auth has all login/signup && config has all createPost,deletePosts etc.
+
+8] Now we have to create store and Slice for reducers. So in this project we create both files in same folder (store)
+
+9] Now we create components folder... which has header and footer folders...containing header.js and footer.js and export them through an index.js file
+
+10] Now in App.jsx we create a useEffect to diplay Loading screen when there's no userSession(No user has logged in or signing in)
+
+11] Now we create a container folder and create container.jsx to export children for Outlet in App.jsx
+
+11] Now we come to footer.js and paste all pure html css. Since it also has a Logo. We create a logo.jsx in root(components) directly to import it
+
+12] Now we create a logout button as a component in Header folder. (We'll only show this logout button in header if user has logged in)
+
+13] Now coming on to the header.jsx. Here we import all files from index.js taht we gnna need.
+    Then just design everything we have to display when & where in header.
+
+14] Now as seen in header we have been using alot of btns and have to style each of them individually. 
+    So instead we gonna build a Button.jsx in root(components) to import this default btn with all styling in every other components now.
+
+15] Now we gonna create a input.jsx in root again.           Here we use ForwardRef to pass its state and action together
+
+16] Now just like input we create a select.jsx for all the options we gonna get on website.     Here we use ForwardRef to pass its state and action together
+
+17] Now create Postcard.jsx  which displays an Image at beginning
+
+18] Now we gonna create Login.jsx which is for Login components
+    
+19] Now create Signup.jsx just like Login.jsx
+
+20] Now we come to create AuthLayout.jsx  For confirming weather user is authenticated or Not.
+
+21] Now we gotta create RTE (real time editor)
+
+22] We get to post-form folder then we create PostForm.jsx
+**********
+23] Now we create Pages one by one... Signup,Login,AddPost,Postform,AllPosts,Home,EditPosts,Post
+      **ALSO import all these into our index.js in components
+
+24] Now complete Routing in Main.jsx
